@@ -1,0 +1,68 @@
+en:
+  settings_aws_accesskey_id: AWS Accesskey ID
+  settings_aws_accesskey: AWS Accecckey
+  settings_aws_region: AWS Region
+  label_aws_admin: AWS
+  project_module_AWS: AWS Admin
+  permission_view_instances: View Instances
+  permission_manage_instances: Manage Instances
+
+  label_instance_new: New Instance
+  label_instance: Instance
+
+  field_created_at: Created At
+  field_allocated_storage: Allocated Storage
+  field_license_model: License Model
+  field_master_username: Master Username
+  field_snapshot_type: Snapshot Type
+  field_vpc_id: VPC ID
+
+
+  field_status: Status
+  field_ip_address: IP Address
+  field_private_ip_address: Private IP
+  field_platform: Platform
+  field_dbname: DB Names
+  field_endpoint: End Point
+  field_port: Port
+  field_engine: Engine
+  field_image_id: Image ID
+  field_image_name: Image Name
+  field_architecture: Architecture
+  field_type: Type
+  field_snapshot_name: Snapshot Name
+  field_create_time: RDS Create
+  field_instance_id: Instance ID
+  field_launch_time: Launch Time
+
+  field_dns_name: DNS Name
+  field_private_dns_name: Private DNS
+  field_availability_zone: Availability Zone
+  field_ami_launch_index: AMI Launch INDEX
+  field_elastic_ip: Elastic IP
+  field_hypervisor: Hypervisor
+  field_iam_instance_profile_arn: IAM Instance Profile ARN
+  field_iam_instance_profile_id: IAM Instance Profile ID
+  field_image_id: Image ID
+  field_subnet_id: Subnet ID
+  field_virtualization_type: Virtualization Type
+  field_vpc_id: VPC ID
+
+  field_created_at: Backup Created
+  field_allocated_storage: Allocated Strage
+  field_license_model: License Model
+  field_master_username: Master User
+  field_snapshot_type: Snapshot Type
+
+  field_auto_upgrade: Auto Upgrade
+  field_backup_retention_period: Backup Retention Period
+  field_character_set_name: Charactoer Set Name
+  field_creation_date_time: Creation Date Time
+  field_db_instance_class: Instance Class
+  field_iops: IOPS
+  field_latest_restorable_time: Lastest Restorable Time
+  field_multi_az: Multi AZ
+  field_preferred_backup_window: Preferred Backup Window
+  field_preferred_maintenance_window: Preferred Maintenance Window
+  field_read_replica_db_instance_identifiers: Read replica DB Instance ID
+  field_read_replica_source_db_instance_identifier: Replica Source DB ID

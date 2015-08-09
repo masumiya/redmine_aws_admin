@@ -1,0 +1,53 @@
+<% content_for :header_tags do %>
+<%= stylesheet_link_tag 'icons.css', :plugin => 'redmine_aws_admin' %>
+<% end %>
+
+<h2> <%=h l :label_aws_admin %> </h2>
+
+<% content_for :sidebar do %>
+
+  <ul>
+    <li><%= link_to "EC2", project_instance_path(@project, 1), :class => 'icon icon-ec2' %></li>
+    <li><%= link_to "EC2 IMAGE", project_instance_path(@project, 3), :class => 'icon icon-ec2' %></li>
+    <li><%= link_to "RDS", project_instance_path(@project, 2), :class => 'icon icon-rds' %></li>
+    <li><%= link_to "RDS Snapshot", project_instance_path(@project, 4), :class => 'icon icon-rds' %></li>
+  </ul>
+
+<% end %>
+
+<% case @view_type %>
+<% when InstancesController::AWS_EC2 %>
+  <h2 class='icon icon-ec2-large'> EC2 </h2> <br />
+  <% if (@ec2_instances.blank?) %>
+    <p class="nodata"><%= l(:label_no_data) %></p>
+  <% else %>
+    <%= render :partial => @ec2_instances %>
+  <% end %>
+
+<% when InstancesController::AWS_EC2_IMAGE %>
+  <h2 class='icon icon-ec2-large'> EC2 Images </h2> <br />
+  <% if (@ec2_images.blank?) %>
+    <p class="nodata"><%= l(:label_no_data) %></p>
+  <% else %>
+    <%= render :partial => @ec2_images %>
+  <% end %>
+
+<% when InstancesController::AWS_RDS %>
+  <h2 class='icon icon-rds-large'> RDS </h2> <br />
+  <% if (@rds_instances.blank?) %>
+    <p class="nodata"><%= l(:label_no_data) %></p>
+  <% else %>
+    <%= render :partial => @rds_instances %>
+  <% end %>
+
+<% when InstancesController::AWS_RDS_SNAPSHOT %>
+  <h2 class='icon icon-rds-large'> RDS SNAPSHOT </h2> <br />
+  <% if (@rds_snapshots.blank?) %>
+    <p class="nodata"><%= l(:label_no_data) %></p>
+  <% else %>
+    <%= render :partial => @rds_snapshots %>
+  <% end %>
+
+<% else %>
+  <p class="nodata"><%= l(:label_no_data) %></p>
+<% end %>

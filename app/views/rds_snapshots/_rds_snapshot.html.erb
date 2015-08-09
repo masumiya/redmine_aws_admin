@@ -1,0 +1,46 @@
+<h4><%= rds_snapshot.db_snapshot_identifier %> [<%= rds_snapshot.status %>]</h4>
+<table class="list">
+  <thead>
+    <tr>
+      <th><%=h l(:field_instance_id) %></th>
+      <th><%=h l(:field_create_time) %></th>
+      <th><%=h l(:field_engine) %></th>
+      <th><%=h l(:field_availability_zone) %></th>
+      <th><%=h l(:field_port) %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><%= rds_snapshot.db_instance_id %></td>
+      <td><%= rds_snapshot.instance_create_time %></td>
+      <td><%= rds_snapshot.engine %> <%= rds_snapshot.engine_version %></td>
+      <td><%= rds_snapshot.availability_zone_name %></td>
+      <td><%= rds_snapshot.port %></td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="list">
+  <thead>
+    <tr>
+      <th><%=h l(:field_created_at) %></th>
+      <th><%=h l(:field_allocated_storage) %></th>
+      <th><%=h l(:field_license_model) %></th>
+      <th><%=h l(:field_master_username) %></th>
+      <th><%=h l(:field_snapshot_type) %></th>
+      <th><%=h l(:field_vpc_id) %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><%= rds_snapshot.created_at %></td>
+      <td><%= rds_snapshot.allocated_storage %> GB</td>
+      <td><%= rds_snapshot.license_model %></td>
+      <td><%= rds_snapshot.master_username %></td>
+      <td><%= rds_snapshot.snapshot_type %></td>
+      <td><%= rds_snapshot.vpc_id %></td>
+    </tr>
+  </tbody>
+</table>
+
+<BR>

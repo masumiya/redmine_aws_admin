@@ -1,0 +1,29 @@
+
+.icon-ec2 {
+  background-image: url('../images/ec2.png');
+  background-size: 15px;
+}
+
+.icon-ec2-large {
+  background-image: url('../images/ec2.png');
+  background-size: 35px;
+  padding-left: 40px;
+}
+
+.icon-rds {
+  background-image: url('../images/rds.png');
+  background-size: 15px;
+}
+
+.icon-rds-large {
+  background-image: url('../images/rds.png');
+  background-size: 35px;
+  padding-left: 40px;
+}
+
+hr.style-split {
+    border: 0;
+    height: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}

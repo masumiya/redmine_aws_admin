@@ -1,0 +1,59 @@
+<h4><%= ec2_image.image_id %> [<%= ec2_image.state %>]</h4>
+<table class="list">
+<thead>
+  <tr>
+    <th><%=h l(:field_image_name) %></th>
+    <th><%=h l(:field_architecture) %></th>
+    <th><%=h l(:field_platform) %></th>
+    <th><%=h l(:field_type) %></th>
+  </tr>
+</thead>
+
+<tbody>
+  <tr>
+    <td><%= ec2_image.name %></td>
+    <td><%= ec2_image.architecture %></td>
+    <td><%= ec2_image.platform %></td>
+    <td><%= ec2_image.image_type %></td>
+  </tr>
+</tbody>
+
+<table class="list">
+<thead>
+  <tr>
+    <th><%=h l(:field_description) %></th>
+    <th><%=h l(:field_hypervisor) %></th>
+    <th><%=h l(:field_kernel_id) %></th>
+    <th><%=h l(:field_location) %></th>
+  </tr>
+</thead>
+
+<tbody>
+  <tr>
+    <td><%= ec2_image.description %></td>
+    <td><%= ec2_image.hypervisor %></td>
+    <td><%= ec2_image.kernel_id %></td>
+    <td><%= ec2_image.location %></td>
+  </tr>
+</tbody>
+
+<table class="list">
+<thead>
+  <tr>
+    <th><%=h l(:field_owner_alias) %></th>
+    <th><%=h l(:field_state_reason) %></th>
+    <th><%=h l(:field_image_type) %></th>
+    <th><%=h l(:field_virtualization_type) %></th>
+  </tr>
+</thead>
+
+<tbody>
+  <tr>
+    <td><%= ec2_image.owner_alias %></td>
+    <td><%= ec2_image.state_reason %></td>
+    <td><%= ec2_image.image_type %></td>
+    <td><%= ec2_image.virtualization_type %></td>
+  </tr>
+</tbody>
+
+</table>

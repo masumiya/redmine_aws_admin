@@ -1,0 +1,82 @@
+<h4><%= ec2_instance.id %> [<%= ec2_instance.status %>]</h4>
+<table class="list">
+  <thead>
+    <tr>
+      <th><%=h l(:field_ip_address) %></th>
+      <th><%=h l(:field_private_ip_address) %></th>
+      <th><%=h l(:field_platform) %></th>
+      <th><%=h l(:field_launch_time) %></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td><%= ec2_instance.ip_address %></td>
+      <td><%= ec2_instance.private_ip_address %></td>
+      <td><%= ec2_instance.platform %></td>
+      <td><%= ec2_instance.launch_time %></td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="list">
+  <thead>
+    <tr>
+      <th><%=h l(:field_dns_name) %></th>
+      <th><%=h l(:field_private_dns_name) %></th>
+      <th><%=h l(:field_availability_zone) %></th>
+      <th><%=h l(:field_architecture) %></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td><%= ec2_instance.dns_name %></td>
+      <td><%= ec2_instance.private_dns_name %></td>
+      <td><%= ec2_instance.availability_zone %></td>
+      <td><%= ec2_instance.architecture %></td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="list">
+  <thead>
+    <tr>
+      <th><%=h l(:field_ami_launch_index) %></th>
+      <th><%=h l(:field_elastic_ip) %></th>
+      <th><%=h l(:field_hypervisor) %></th>
+      <th><%=h l(:field_iam_instance_profile_arn) %></th>
+      <th><%=h l(:field_iam_instance_profile_id) %></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td><%= ec2_instance.ami_launch_index %></td>
+      <td><%= ec2_instance.elastic_ip %></td>
+      <td><%= ec2_instance.hypervisor %></td>
+      <td><%= ec2_instance.iam_instance_profile_arn %></td>
+      <td><%= ec2_instance.iam_instance_profile_id %></td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="list">
+  <thead>
+    <tr>
+      <th><%=h l(:field_image_id) %></th>
+      <th><%=h l(:field_subnet_id) %></th>
+      <th><%=h l(:field_virtualization_type) %></th>
+      <th><%=h l(:field_vpc_id) %></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td><%= ec2_instance.image_id %></td>
+      <td><%= ec2_instance.subnet_id %></td>
+      <td><%= ec2_instance.virtualization_type %></td>
+      <td><%= ec2_instance.vpc_id %></td>
+    </tr>
+  </tbody>
+</table>

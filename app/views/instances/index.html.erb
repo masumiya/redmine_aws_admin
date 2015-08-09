@@ -1,0 +1,152 @@
+<% content_for :header_tags do %>
+<%= stylesheet_link_tag 'icons.css', :plugin => 'redmine_aws_admin' %>
+<% end %>
+
+<h2> <%=h l :label_aws_admin %> </h2>
+
+<% content_for :sidebar do %>
+
+  <ul>
+    <li><%= link_to "EC2", project_instance_path(@project, 1), :class => 'icon icon-ec2' %></li>
+    <li><%= link_to "EC2 IMAGE", project_instance_path(@project, 3), :class => 'icon icon-ec2' %></li>
+    <li><%= link_to "RDS", project_instance_path(@project, 2), :class => 'icon icon-rds' %></li>
+    <li><%= link_to "RDS Snapshot", project_instance_path(@project, 4), :class => 'icon icon-rds' %></li>
+  </ul>
+
+<% end %>
+
+<h4 class='icon icon-ec2'> EC2 [Total:<%= @total_ec2_instances %>]</h4>
+<% if (@ec2_instances.blank?) %>
+<p class="nodata"><%= l(:label_no_data) %></p>
+
+<% else %>
+<table class="list">
+<thead>
+  <tr>
+    <th><%=h l(:field_instance_id) %></th>
+    <th><%=h l(:field_status) %></th>
+    <th><%=h l(:field_ip_address) %></th>
+    <th><%=h l(:field_private_ip_address) %></th>
+    <th><%=h l(:field_platform) %></th>
+    <th><%=h l(:field_launch_time) %></th>
+  </tr>
+</thead>
+
+<tbody>
+<% @ec2_instances.each do |ec2| %>
+  <tr class="<%= cycle('odd', 'even') %>">
+    <td><%= ec2.id %></td>
+    <td><%= ec2.status %></td>
+    <td><%= ec2.ip_address %></td>
+    <td><%= ec2.private_ip_address %></td>
+    <td><%= ec2.platform %></td>
+    <td><%= ec2.launch_time %></td>
+  </tr>
+<% end %>
+</tbody>
+
+</table>
+<% end %>
+
+
+<h4 class='icon icon-rds'> RDS [Total:<%= @total_rds_instances %>]</h4>
+<% if (@rds_instances.blank?) %>
+<p class="nodata"><%= l(:label_no_data) %></p>
+
+<% else %>
+<table class="list">
+
+<thead>
+  <tr>
+    <th><%=h l(:field_instance_id) %></th>
+    <th><%=h l(:field_status) %></th>
+    <th><%=h l(:field_dbname) %></th>
+    <th><%=h l(:field_endpoint) %></th>
+    <th><%=h l(:field_port) %></th>
+    <th><%=h l(:field_engine) %></th>
+  </tr>
+</thead>
+
+<tbody>
+<% @rds_instances.each do |rds| %>
+  <tr class="<%= cycle('odd', 'even') %>">
+    <td><%= rds.db_instance_identifier %></td>
+    <td><%= rds.db_instance_status %></td>
+    <td><%= rds.db_name %></td>
+    <td><%= rds.endpoint_address %></td>
+    <td><%= rds.endpoint_port %></td>
+    <td><%= rds.engine %></td>
+  </tr>
+<% end %>
+</tbody>
+
+</table>
+<% end %>
+
+
+<h4 class='icon icon-ec2'> EC2 Images [Total:<%= @total_ec2_images %>]</h4>
+<% if (@ec2_images.blank?) %>
+<p class="nodata"><%= l(:label_no_data) %></p>
+
+<% else %>
+<table class="list">
+
+<thead>
+  <tr>
+    <th><%=h l(:field_image_id) %></th>
+    <th><%=h l(:field_status) %></th>
+    <th><%=h l(:field_image_name) %></th>
+    <th><%=h l(:field_architecture) %></th>
+    <th><%=h l(:field_platform) %></th>
+    <th><%=h l(:field_type) %></th>
+  </tr>
+</thead>
+
+<tbody>
+<% @ec2_images.each do |image| %>
+  <tr class="<%= cycle('odd', 'even') %>">
+    <td><%= image.image_id %></td>
+    <td><%= image.state %></td>
+    <td><%= image.name %></td>
+    <td><%= image.architecture %></td>
+    <td><%= image.platform %></td>
+    <td><%= image.image_type %></td>
+  </tr>
+<% end %>
+</tbody>
+
+</table>
+<% end %>
+
+
+<h4 class='icon icon-rds'> RDS Snapshots [Total:<%= @total_rds_snapshots %>]</h4>
+<% if (@rds_snapshots.blank?) %>
+<p class="nodata"><%= l(:label_no_data) %></p>
+
+<% else %>
+<table class="list">
+
+<thead>
+  <tr>
+    <th><%=h l(:field_snapshot_name) %></th>
+    <th><%=h l(:field_status) %></th>
+    <th><%=h l(:field_instance_id) %></th>
+    <th><%=h l(:field_created_at) %></th>
+    <th><%=h l(:field_engine) %></th>
+  </tr>
+</thead>
+
+<tbody>
+<% @rds_snapshots.each do |ss| %>
+  <tr class="<%= cycle('odd', 'even') %>">
+    <td><%= ss.db_snapshot_identifier %></td>
+    <td><%= ss.status %></td>
+    <td><%= ss.db_instance_id %></td>
+    <td><%= ss.created_at %></td>
+    <td><%= ss.engine %></td>
+  </tr>
+<% end %>
+</tbody>
+
+</table>
+<% end %>

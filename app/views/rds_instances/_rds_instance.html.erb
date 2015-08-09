@@ -1,0 +1,88 @@
+<h4><%= rds_instance.db_instance_identifier %> [<%= rds_instance.db_instance_status %>]</h4>
+<table class="list">
+<thead>
+<tr>
+<th><%=h l(:field_dbname) %></th>
+<th><%=h l(:field_endpoint) %></th>
+<th><%=h l(:field_port) %></th>
+<th><%=h l(:field_engine) %></th>
+<th><%=h l(:field_auto_upgrade) %></th>
+</tr>
+</thead>
+
+<tbody>
+  <tr>
+    <td><%= rds_instance.db_name %></td>
+    <td><%= rds_instance.endpoint_address %></td>
+    <td><%= rds_instance.endpoint_port %></td>
+    <td><%= rds_instance.engine %> <%= rds_instance.engine_version %></td>
+    <td><%= (rds_instance.auto_minor_version_upgrade == "t" ? "◯" : "-") %></td>
+  </tr>
+</tbody>
+</table>
+
+<table class="list">
+<thead>
+<tr>
+<th><%=h l(:field_availability_zone) %></th>
+<th><%=h l(:field_allocated_storage) %></th>
+<th><%=h l(:field_backup_retention_period) %></th>
+<th><%=h l(:field_character_set_name) %></th>
+<th><%=h l(:field_creation_date_time) %></th>
+</tr>
+</thead>
+
+<tbody>
+  <tr>
+    <td><%= rds_instance.availability_zone_name %></td>
+    <td><%= rds_instance.allocated_storage %> GB</td>
+    <td><%= rds_instance.backup_retention_period %></td>
+    <td><%= rds_instance.character_set_name %></td>
+    <td><%= rds_instance.creation_date_time %></td>
+  </tr>
+</tbody>
+
+<table class="list">
+<thead>
+<tr>
+<th><%=h l(:field_db_instance_class) %></th>
+<th><%=h l(:field_iops) %></th>
+<th><%=h l(:field_latest_restorable_time) %></th>
+<th><%=h l(:field_license_model) %></th>
+<th><%=h l(:field_master_username) %></th>
+<th><%=h l(:field_vpc_id) %></th>
+</tr>
+</thead>
+
+<tbody>
+  <tr>
+    <td><%= rds_instance.db_instance_class %></td>
+    <td><%= rds_instance.iops %></td>
+    <td><%= rds_instance.latest_restorable_time %></td>
+    <td><%= rds_instance.license_model %></td>
+    <td><%= rds_instance.master_username %></td>
+    <td><%= rds_instance.vpc_id %></td>
+  </tr>
+</tbody>
+</table>
+
+<table class="list">
+<thead>
+<tr>
+<th><%=h l(:field_multi_az) %></th>
+<th><%=h l(:field_preferred_backup_window) %></th>
+<th><%=h l(:field_preferred_maintenance_window) %></th>
+<th><%=h l(:field_read_replica_db_instance_identifiers) %></th>
+<th><%=h l(:field_read_replica_source_db_instance_identifier) %></th>
+</tr>
+</thead>
+<tbody>
+  <tr>
+    <td><%= (rds_instance.multi_az == "t" ? "◯" : "-") %></td>
+    <td><%= rds_instance.preferred_backup_window %></td>
+    <td><%= rds_instance.preferred_maintenance_window %></td>
+    <td><%= rds_instance.read_replica_db_instance_identifiers %></td>
+    <td><%= rds_instance.read_replica_source_db_instance_identifier %></td>
+  </tr>
+</tbody>
+</table>

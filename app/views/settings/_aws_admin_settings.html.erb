@@ -1,0 +1,12 @@
+<p>
+  <%= label_tag :settings_aws_accesskey_id, l(:settings_aws_accesskey_id) %>
+  <%= text_field_tag "settings[aws_accesskey_id]", @settings[:aws_accesskey_id] %>
+</p>
+<p>
+  <%= label_tag :settings_aws_accesskey, l(:settings_aws_accesskey) %>
+  <%= text_field_tag "settings[aws_accesskey]", @settings[:aws_accesskey] %>
+</p>
+<p>
+  <%= label_tag :settings_aws_region, l(:settings_aws_region) %>
+  <%= text_field_tag "settings[aws_region]", @settings[:aws_region] %>
+</p>

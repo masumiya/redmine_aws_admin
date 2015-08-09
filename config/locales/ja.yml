@@ -1,0 +1,67 @@
+ja:
+  settings_aws_accesskey_id: AWSアクセスキーID
+  settings_aws_accesskey: AWSアクセスキー
+  settings_aws_region: AWSリージョン名
+  label_aws_admin: AWS
+  project_module_AWS: AWS管理
+  permission_view_instances: インスタンス情報の閲覧
+  permission_manage_instances: インスタンスの管理
+
+  label_instance_new: 新しいインスタンス情報
+  label_instance: インスタンス情報
+
+  field_status: ステータス
+  field_ip_address: IPアドレス
+  field_private_ip_address: プライベートIP
+  field_platform: プラットフォーム
+  field_dbname: DB名
+  field_endpoint: エンドポイント
+  field_port: ポート番号
+  field_engine: エンジン
+  field_image_id: イメージID
+  field_image_name: イメージ名
+  field_architecture: アーキテクチャ
+  field_type: タイプ
+  field_snapshot_name: スナップショット名
+  field_create_time: RDS作成日
+  field_instance_id: インスタンスID
+  field_launch_time: ローンチ日時
+
+  field_dns_name: DNS名
+  field_private_dns_name: プライベートDNS
+  field_availability_zone: ゾーン
+  field_ami_launch_index: AMIローンチINDEX
+  field_elastic_ip: エラスティックIP
+  field_hypervisor: ハイパーバイザ
+  field_iam_instance_profile_arn: IAMインスタンスプロファイル
+  field_iam_instance_profile_id: IAMインスタンスプロファイルID
+  field_image_id: イメージID
+  field_subnet_id: サブネットID
+  field_virtualization_type: 仮想タイプ
+  field_vpc_id: VPC ID
+
+  field_created_at: バックアップ取得日時
+  field_allocated_storage: ストレージ割当
+  field_license_model: ライセンスモデル
+  field_master_username: 作成ユーザ
+  field_snapshot_type: スナップショットタイプ
+
+  field_auto_upgrade: 自動アップグレード
+  field_backup_retention_period: 保存世代数
+  field_character_set_name: 文字セット
+  field_creation_date_time: 作成日時
+  field_db_instance_class: インスタンスクラス
+  field_iops: IOPS
+  field_latest_restorable_time: 最終復旧可能時間
+  field_multi_az: マルチAZ
+  field_preferred_backup_window: バックアップ時刻
+  field_preferred_maintenance_window: メンテナンス時間
+  field_read_replica_db_instance_identifiers: リードレプリカ
+  field_read_replica_source_db_instance_identifier: マスタDB
+
+  field_description: 説明
+  field_kernel_id: カーネルID
+  field_location: ロケーション
+  field_owner_alias: オーナー
+  field_state_reason: 状態説明
+  field_image_type: イメージタイプ
